@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons }  from '@expo/vector-icons';
 import { currentTheme } from '../../theme/Colours';
 import { Drawer, SwipeableDrawer } from '@material-ui/core';
-import DrawerContent from '../Drawer/Drawer';
+import DrawerContent from '../Drawer/DrawerContent';
 
 /**
  * Props for the Overlays Component.
