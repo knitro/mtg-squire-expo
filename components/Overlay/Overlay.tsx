@@ -5,23 +5,33 @@ import { currentTheme } from '../../theme/Colours';
 import { Drawer, SwipeableDrawer } from '@material-ui/core';
 import DrawerContent from '../Drawer/DrawerContent';
 
-/**
- * Props for the Overlays Component.
- */
-interface OverlayProps {
+////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////
+interface Props {
   headerLabel : string //The header label for the header
 }
 
-/*Constants Initialisation*/
+////////////////////////////////////////////////
+// Supporting Variables
+////////////////////////////////////////////////
+
 const menuSize : number = 22;
+
+////////////////////////////////////////////////
+// Component
+////////////////////////////////////////////////
 
 /**
  * Creates the Overlays for the App.
  * @param props - takes in parameters (currently only a string to display on the header).
  */
-const Overlay: React.FC<OverlayProps> = (props) => {
+const Overlay: React.FC<Props> = (props : Props) => {
   
-  /*Hook Initialisation*/
+  ////////////////////////
+  // Var Initialisation
+  ////////////////////////
+
   const [drawerOpen, toggleDrawerOpen] = useState(false); //Toggles the Overlay's Sidemenu Drawer
 
   /*Return*/
@@ -30,33 +40,34 @@ const Overlay: React.FC<OverlayProps> = (props) => {
     <View>
 
       {/*Creates the Header Component. Styles creates the rectangle box*/}
-      <View style={OverlayStyles.header}>
+      <View style={Style.header}>
 
         {/*Creates the Hamburger Icon + Label*/}
-        <MaterialIcons name='menu' size={menuSize} onPress={() => toggleDrawerOpen(!drawerOpen)} style={OverlayStyles.icon} />
-        <Text style={OverlayStyles.headerText}>{props.headerLabel}</Text>
+        <MaterialIcons name='menu' size={menuSize} onPress={() => toggleDrawerOpen(!drawerOpen)} style={Style.icon} />
+        <Text style={Style.headerText}>{props.headerLabel}</Text>
 
       </View>
 
       {/*Creates the Drawer*/}
-      <SwipeableDrawer  
+      <Drawer  
         anchor={"left"} 
         open={drawerOpen}
-        onOpen={() => toggleDrawerOpen(true)}
+        // onOpen={() => toggleDrawerOpen(true)}
         onClose={() => toggleDrawerOpen(false)} 
         style={{width:200}}
       >
         <DrawerContent closeDrawer={() => toggleDrawerOpen(false)}/>
-      </SwipeableDrawer >
+      </Drawer >
       
     </View>
   );
 };
 
-/**
- * StyleSheet for the Overlays
- */
-const OverlayStyles = StyleSheet.create({
+////////////////////////////////////////////////
+// Stylesheet
+////////////////////////////////////////////////
+
+const Style = StyleSheet.create({
   header: {
     width: '100%',
     height: '60px',
