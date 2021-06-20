@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons }  from '@expo/vector-icons';
 import { currentTheme } from '../../theme/Colours';
-import { Drawer } from '@material-ui/core';
+import { Drawer, SwipeableDrawer } from '@material-ui/core';
 import DrawerContent from '../Drawer/Drawer';
 
 /**
@@ -39,14 +39,15 @@ const Overlay: React.FC<OverlayProps> = (props) => {
       </View>
 
       {/*Creates the Drawer*/}
-      <Drawer 
+      <SwipeableDrawer  
         anchor={"left"} 
         open={drawerOpen}
+        onOpen={() => toggleDrawerOpen(true)}
         onClose={() => toggleDrawerOpen(false)} 
         style={{width:200}}
       >
         <DrawerContent closeDrawer={() => toggleDrawerOpen(false)}/>
-      </Drawer>
+      </SwipeableDrawer >
       
     </View>
   );
