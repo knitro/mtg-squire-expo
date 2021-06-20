@@ -13,11 +13,23 @@ import SettingsIcon from '../Icons/SettingsIcon';
 import TradeIcon from '../Icons/TradeIcon';
 import WishListIcon from '../Icons/WishListIcon';
 
-interface DrawerIconProps {
+////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////
+interface Props {
   name : string;
 };
 
-const DrawerIcon = (props : DrawerIconProps) => {
+////////////////////////////////////////////////
+// Component
+////////////////////////////////////////////////
+
+/**
+ * Gets the Icon in relation to the props provided
+ * @param props - See props above
+ * @returns an Icon
+ */
+const DrawerIcon = (props : Props) => {
 
   return (
     ("Quick Search".localeCompare(props.name) === 0)
@@ -44,12 +56,7 @@ const DrawerIcon = (props : DrawerIconProps) => {
     ? <HelpIcon/>
     : ("Back".localeCompare(props.name) === 0)
     ? <ReturnIcon/>
-
     : <View/>
-
-
-
-
     );
 }
 

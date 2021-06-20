@@ -1,20 +1,30 @@
 import React from 'react';
-import { Card, CardHeader, Typography } from '@material-ui/core';
+import { Card, Typography } from '@material-ui/core';
 import { TouchableOpacity, View } from 'react-native';
-import AdvancedSearchIcon from '../Icons/AdvancedSearchIcon';
 import DrawerIcon from './DrawerIcon';
 import { currentTheme } from '../../theme/Colours';
 
-interface DrawerButtonProps {
+////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////
+interface Props {
   name : string;
   buttonNav : () => void;
   closeDrawer : () => void;
 };
 
-const DrawerButton = (props : DrawerButtonProps) => {
+////////////////////////////////////////////////
+// Component
+////////////////////////////////////////////////
+
+/**
+ * Returns a Button for the Drawer
+ * @param props - see props above
+ * @returns a Singular button with an icon and text that redirects the user to a certain page.
+ */
+const DrawerButton = (props : Props) => {
 
   return (
-    <Card>
       <TouchableOpacity     
         onPress={() => {
           props.buttonNav();    
@@ -27,7 +37,6 @@ const DrawerButton = (props : DrawerButtonProps) => {
           <Typography style={{paddingLeft: 10, fontSize: 20, color: currentTheme.secondary.contrast }}>{props.name}</Typography>
         </View>
       </TouchableOpacity>
-    </Card>
   );
 }
 
