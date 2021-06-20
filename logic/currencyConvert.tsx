@@ -42,6 +42,10 @@ export function getConvertedValue(value : number, currencyFrom : string, currenc
  * @param currencies - the storage class of currency
  */
 function getCurrencyValue(type : string, currencies : CurrencyInformation) : number {
+
+  console.log(type);
+  console.log(currencies);
+
   if ("CAD".localeCompare(type) === 0)
     return currencies.rates.CAD;
   else if ("HKD".localeCompare(type) === 0)

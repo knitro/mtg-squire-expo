@@ -1,21 +1,21 @@
-////////////////////////
+////////////////////////////////////////////////
 /*Imports*/
-////////////////////////
+////////////////////////////////////////////////
 
 import { Plugins } from '@capacitor/core';
 import axios from 'axios';
+import { CURRENCY_API_KEY } from '../apikeys/apikeys';
 
-////////////////////////
+////////////////////////////////////////////////
 /*Local Initialisation*/
-////////////////////////
+////////////////////////////////////////////////
 
 const { Storage } = Plugins;
+const storageKey : string = "currency"; // Unique Key for Capactior Storage
 
-const storageKey : string = "currency";   // String that dictates the storage identifier in the capacitor.
-
-////////////////////////
+////////////////////////////////////////////////
 /*Export Initialisation*/
-////////////////////////
+////////////////////////////////////////////////
 
 /**
  * Default value for currency information
@@ -37,9 +37,9 @@ export const emptyCurrencyInformation : CurrencyInformation = {
 
 export var cacheCurrencyState : CurrencyInformation = Object.assign([], emptyCurrencyInformation);
 
-////////////////////////
+////////////////////////////////////////////////
 /*Interfaces*/
-////////////////////////
+////////////////////////////////////////////////
 
 /**
  * Interface for currency information 
@@ -90,9 +90,9 @@ interface Currencies {
     PLN: number;
 }
 
-////////////////////////
-/*Capacitor Storage for History Storage*/
-////////////////////////
+////////////////////////////////////////////////
+/*Capacitor Storage*/
+////////////////////////////////////////////////
 
 /**
  * Saves a CurrencyInformation into storage.
@@ -181,7 +181,7 @@ async function getCurrencyStorage() : Promise<CurrencyInformation> {
 async function getCurrencyAPI() : Promise<boolean> {
 
   /*Variable Initialisation*/
-  const url : string = "https://api.exchangeratesapi.io/latest?base=USD";
+  const url : string = "http://api.exchangeratesapi.io/v1/latest?access_key=" + CURRENCY_API_KEY;
   
   /*Perform API Call*/
   try {
