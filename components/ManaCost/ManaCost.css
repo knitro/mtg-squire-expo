@@ -1,0 +1,19 @@
+.normalSymbolImage {
+  min-width: 15%;
+  max-width: 15%;
+  min-height: 15%;
+  max-height: 15%;
+  display: flex;
+}
+
+.symbol_100 {
+  min-width: 80%;
+  max-width: 80%;
+  display: flex;
+}
+
+.symbol_1000000 {
+  min-width: 77.5%;
+  max-width: 77.5%;
+  display: flex;
+}

@@ -1,0 +1,8 @@
+/* Card component */
+.MuiCard-root {
+  display: inline-block;
+  flex-direction: column;
+  text-align: left;
+  align-content: center;
+  margin: 8px;
+}
