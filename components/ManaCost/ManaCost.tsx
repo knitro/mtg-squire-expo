@@ -4,12 +4,11 @@ import { getSearchState } from '../../states/SearchState';
 import { View } from 'react-native';
 import { Asset } from 'expo-asset';
 import { Grid } from '@material-ui/core';
-
 import './ManaCost.css';
 
-////////////////////////
-/*Interfaces*/
-////////////////////////
+////////////////////////////////////////////////
+// Interface
+////////////////////////////////////////////////
 
 /**
  * The Main Interface.
@@ -91,6 +90,9 @@ const symbolToImageCollection : symbolToImageInterface[]= [
   {tag: "Z",    dir: Asset.fromModule(require("../../assets/images/manacost/Z.png")).uri}
 ];
 
+////////////////////////////////////////////////
+// Class
+////////////////////////////////////////////////
 class ManaCost extends Component<{cost : string}> {
 
   ////////////////////////

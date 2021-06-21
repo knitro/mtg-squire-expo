@@ -3,6 +3,10 @@ import SearchBarCards from './SearchBarCards/SearchBarCards';
 import { Typography } from '@material-ui/core';
 import { CardTextStyle } from '../../styles/CardStyle';
 
+////////////////////////////////////////////////
+// Enums
+////////////////////////////////////////////////
+
 /**
  * Enum for specifying the search type of the searchbar.
  */
@@ -12,20 +16,28 @@ export enum SearchCategory {
   SetEV
 }
 
+////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////
+
 /**
  * Props for the SearchBar Component.
  */
-interface SearchBarProps {
+interface Props {
   searchString: string;
   placeholderText: string;
   category : SearchCategory;
 }
 
+////////////////////////////////////////////////
+// Component
+////////////////////////////////////////////////
+
 /**
  * Creates the SearchBar.
  * @param props - Considers the parameters to set the searchbar.
  */
-const SearchBar = (props : SearchBarProps) => {
+const SearchBar = (props : Props) => {
 
   /*Variable Initialisation*/
   let category : SearchCategory = props.category;

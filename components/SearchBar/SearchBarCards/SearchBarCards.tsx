@@ -4,29 +4,37 @@ import { currentTheme } from '../../../theme/Colours';
 import { ActivityIndicator, Alert, Button, View } from 'react-native';
 import { searchCall } from '../../../logic/dataManagerCall';
 
-/**
- * Props for the SearchBarCards Component.
- */
-interface SearchBarCardsProps {
+////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////
+interface Props {
   searchString: string;
   placeholderText: string;
 }
+
+////////////////////////////////////////////////
+// Component
+////////////////////////////////////////////////
 
 /**
  * Search Bar for Cards Component.
  * Also declares the alert and loading animation that go in hand with the Search Bar.
  * @param props - Search Bar Props to set initial settings
  */
-const SearchBarCards = (props : SearchBarCardsProps) => {
+const SearchBarCards = (props : Props) => {
 
-  /*Variable Initialisation*/
+  ////////////////////////
+  // Initialisation
+  ////////////////////////
+
+  // Props
   let placeholderText : string = props.placeholderText;
 
-  /*Hook Initialisation*/
+  // Hooks
   const [showLoading, setShowLoading] = useState(false);
   const [searchString, setSearchString] = useState(props.searchString);
 
-  /*Alert Initialisation*/
+  // Alert
   const createErrorAlert = () => {
     Alert.alert(
       "ERROR",
@@ -38,7 +46,10 @@ const SearchBarCards = (props : SearchBarCardsProps) => {
     );
   }
 
-  /*Rendering*/
+  ////////////////////////
+  // Return
+  ////////////////////////
+
   return (
     <View>
 

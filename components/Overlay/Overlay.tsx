@@ -29,12 +29,15 @@ const menuSize : number = 22;
 const Overlay: React.FC<Props> = (props : Props) => {
   
   ////////////////////////
-  // Var Initialisation
+  // Initialisation
   ////////////////////////
 
   const [drawerOpen, toggleDrawerOpen] = useState(false); //Toggles the Overlay's Sidemenu Drawer
 
-  /*Return*/
+  /////////////////////////
+  // Return
+  ////////////////////////
+  
   return (
 
     <View>
