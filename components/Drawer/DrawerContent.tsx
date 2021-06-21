@@ -44,7 +44,6 @@ class DrawerContent extends React.Component<Props> {
         <DrawerButton name={"Wishlist"}        buttonNav={() => Actions.wishlist()}       closeDrawer={this.closeDrawerFunction}/>
         <DrawerButton name={"Trade Cards"}     buttonNav={() => Actions.tradeCards()}     closeDrawer={this.closeDrawerFunction}/>
         <DrawerButton name={"Rules"}           buttonNav={() => Actions.rules()}          closeDrawer={this.closeDrawerFunction}/>
-        <DrawerButton name={"Set EVs"}         buttonNav={() => Actions.setEVs()}         closeDrawer={this.closeDrawerFunction}/>
         <DrawerButton name={"Search History"}  buttonNav={() => Actions.searchHistory()}  closeDrawer={this.closeDrawerFunction}/>
         <DrawerButton name={"Settings"}        buttonNav={() => Actions.settings()}       closeDrawer={this.closeDrawerFunction}/>
         <DrawerButton name={"Help"}            buttonNav={() => Actions.help()}           closeDrawer={this.closeDrawerFunction}/>

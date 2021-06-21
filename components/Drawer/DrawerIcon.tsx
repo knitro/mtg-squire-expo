@@ -33,26 +33,37 @@ const DrawerIcon = (props : Props) => {
   return (
     ("Quick Search".localeCompare(props.name) === 0)
     ? <YoutubeSearchedForIcon/>
+
     : ("Advanced Search".localeCompare(props.name) === 0)
     ? <SearchIcon/>
+
     : ("Dice".localeCompare(props.name) === 0)
     ? <CasinoIcon/>
+
     : ("Life Tracker".localeCompare(props.name) === 0)
     ? <LocalHospitalIcon/>
+
     : ("Wishlist".localeCompare(props.name) === 0)
     ? <StarBorderIcon/>
+
     : ("Trade Cards".localeCompare(props.name) === 0)
     ? <SwapHorizIcon/>
+
     : ("Rules".localeCompare(props.name) === 0)
     ? <GavelIcon/>
-    : ("Set EVs".localeCompare(props.name) === 0)
+
+    : ("Search History".localeCompare(props.name) === 0)
     ? <HistoryIcon/>
+
     : ("Settings".localeCompare(props.name) === 0)
     ? <SettingsIcon/>
+
     : ("Help".localeCompare(props.name) === 0)
     ? <HelpIcon/>
+
     : ("Back".localeCompare(props.name) === 0)
     ? <KeyboardBackspaceIcon/>
+
     : <BrokenImageIcon/>
     );
 }
