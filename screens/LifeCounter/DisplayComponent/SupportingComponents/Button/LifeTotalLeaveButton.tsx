@@ -2,8 +2,8 @@ import React from 'react';
 import { PlayersContextProvider, PlayersContextConsumer, Players } from '../../../../../states/LifeCounterPlayerState';
 import { Actions } from 'react-native-router-flux';
 import { Fab } from '@material-ui/core';
-import ReturnIcon from '../../../../../components/Icons/ReturnIcon';
 import { Dimensions } from 'react-native';
+import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 
 /**
  * Button for leaving life counter page
@@ -41,7 +41,7 @@ const LifeTotalLeaveButtonOnePlayer = () => {
       height:70,  
     }}
     >
-      <ReturnIcon/>
+      <KeyboardReturnIcon/>
     </Fab>
   )
 }
@@ -66,7 +66,7 @@ const LifeTotalLeaveButtonTwoPlayer = () => {
       top: h/2 - 35,
     }}
     >
-      <ReturnIcon/>
+      <KeyboardReturnIcon/>
     </Fab>
   )
 }
@@ -91,7 +91,7 @@ const LifeTotalLeaveButtonThreePlayer = () => {
       top: h/3 - 35,
     }}
     >
-      <ReturnIcon/>
+      <KeyboardReturnIcon/>
     </Fab>
   )
 }

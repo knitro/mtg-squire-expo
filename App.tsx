@@ -23,20 +23,6 @@ import LifeCounterSetLife from './screens/LifeCounter/DisplayComponent/SetupPage
 import LifeCounterConfirm from './screens/LifeCounter/DisplayComponent/SetupPages/LifeCounterConfirm';
 import LifeCounter from './screens/LifeCounter/DisplayComponent/LifeCounter';
 
-
-/*Icon Imports*/
-import SearchIcon from './components/Icons/SearchIcon';
-import DiceIcon from './components/Icons/DiceIcon';
-import SettingsIcon from './components/Icons/SettingsIcon';
-import AdvancedSearchIcon from './components/Icons/AdvancedSearchIcon';
-import LifeIcon from './components/Icons/LifeIcon';
-import TradeIcon from './components/Icons/TradeIcon';
-import RulesIcon from './components/Icons/RulesIcon';
-import SetEvIcon from './components/Icons/SetEvIcon';
-import HelpIcon from './components/Icons/HelpIcon';
-import WishListIcon from './components/Icons/WishListIcon';
-import SearchHistoryIcon from './components/Icons/SearchHistoryIcon';
-
 /*External Component Imports*/
 import {v4 as uuid} from 'uuid';
 import { currentTheme } from './theme/Colours';
@@ -149,7 +135,6 @@ const App = () => {
                     component={QuickSearchDownloaded}
                     title="Quick Search"
                     tabBarLabel="Quick Search"
-                    icon={SearchIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                   />
@@ -179,7 +164,6 @@ const App = () => {
                     key="advancedSearch"
                     component={AdvancedSearch}
                     title="Quick Search"
-                    icon={AdvancedSearchIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -210,7 +194,6 @@ const App = () => {
                     key="searchHistory"
                     component={SearchHistory}
                     title="Search History"
-                    icon={SearchHistoryIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -221,7 +204,6 @@ const App = () => {
                     key="wishlist"
                     component={WishList}
                     title="Settings"
-                    icon={WishListIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -236,7 +218,6 @@ const App = () => {
                     key="dice"
                     component={Dice}
                     title="Dice"
-                    icon={DiceIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -247,7 +228,6 @@ const App = () => {
                     key="settings"
                     component={Settings}
                     title="Settings"
-                    icon={SettingsIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                   />
@@ -257,7 +237,6 @@ const App = () => {
                     key="help"
                     component={Help}
                     title="Help"
-                    icon={HelpIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -268,7 +247,6 @@ const App = () => {
                     key="lifeCounter"
                     component={LifeCounterNewGame}
                     title="Life Tracker"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                   />
@@ -278,7 +256,6 @@ const App = () => {
                     key="lifeCounterSetPlayer"
                     component={LifeCounterSetPlayers}
                     title="Life Tracker - New Game"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -289,7 +266,6 @@ const App = () => {
                     key="lifeCounterSetLife"
                     component={LifeCounterSetLife}
                     title="Life Tracker - New Game"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -300,7 +276,6 @@ const App = () => {
                     key="lifeCounterConfirm"
                     component={LifeCounterConfirm}
                     title="Life Tracker - New Game"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -310,7 +285,6 @@ const App = () => {
                     key="lifeCounterPlay"
                     component={LifeCounter}
                     title="Life Tracker"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -324,7 +298,6 @@ const App = () => {
                     key="signUp"
                     component={SignUp}
                     title="Sign Up"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -334,7 +307,6 @@ const App = () => {
                     key="login"
                     component={Login}
                     title="Login"
-                    icon={LifeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -350,7 +322,6 @@ const App = () => {
                     key="tradeCards"
                     component={TradeCards}
                     title="Trade Cards"
-                    icon={TradeIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -361,7 +332,6 @@ const App = () => {
                     key="rules"
                     component={Rules}
                     title="Rules"
-                    icon={RulesIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}
@@ -372,7 +342,6 @@ const App = () => {
                     key="setEVs"
                     component={SetEVs}
                     title="Set EVs"
-                    icon={SetEvIcon}
                     navigationBarStyle={navBarStyle.navBar}
                     titleStyle={navBarStyle.text}
                     drawerLockMode={'locked-closed'}

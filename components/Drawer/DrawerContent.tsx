@@ -1,15 +1,7 @@
-import { Card, createStyles, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
-import { View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import { Theme } from 'react-navigation';
-import { currentTheme } from '../../theme/Colours';
-import CardIcon from '../Icons/CardIcon';
 import DrawerButton from './DrawerButton';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 
 ////////////////////////////////////////////////
 // Props

@@ -1,11 +1,10 @@
 import { Fab } from '@material-ui/core';
 import React from 'react';
-import { View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import Firebase from '../../../../components/Firebase';
-import AddIcon from '../../../../components/Icons/AddIcon';
+import Firebase from '../../../../Firebase';
 import { SearchState } from '../../../../states/SearchState';
 import { WishListData } from '../../../../states/WishListData';
+import AddIcon from '@material-ui/icons/Add';
 
 interface LoginProps {
   firebase : Firebase

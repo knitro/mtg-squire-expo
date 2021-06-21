@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { ActivityIndicator, Alert, ScrollView, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import Firebase from '../../../components/Firebase';
-import LogoutIcon from '../../../components/Icons/LogoutIcon';
+import Firebase from '../../../Firebase';
 import Overlay from '../../../components/Overlay/Overlay';
 import { CardStyle, CardTextStyle } from '../../../styles/CardStyle';
 import {v4 as uuid} from 'uuid';
 import { searchCallURI } from '../../../logic/dataManagerCall';
 import { SearchState } from '../../../states/SearchState';
 import { WishListData } from '../../../states/WishListData';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 interface WishListProps {
   firebase : Firebase
@@ -117,7 +117,7 @@ const WishListComponent: React.FC<WishListProps> = (props : WishListProps) => {
               margin: 5,  
             }}
           >
-            <LogoutIcon/>
+            <ExitToAppIcon/>
           </Fab>
   
         </View>
@@ -172,7 +172,7 @@ const WishListComponent: React.FC<WishListProps> = (props : WishListProps) => {
               margin: 5,  
             }}
           >
-            <LogoutIcon/>
+            <ExitToAppIcon/>
           </Fab>
   
         </View>
