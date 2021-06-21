@@ -1,17 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
-import AdvancedSearchIcon from '../Icons/AdvancedSearchIcon';
-import DiceIcon from '../Icons/DiceIcon';
-import HelpIcon from '../Icons/HelpIcon';
-import LifeIcon from '../Icons/LifeIcon';
-import ReturnIcon from '../Icons/ReturnIcon';
-import RulesIcon from '../Icons/RulesIcon';
-import SearchHistoryIcon from '../Icons/SearchHistoryIcon';
-import SearchIcon from '../Icons/SearchIcon';
-import SetEvIcon from '../Icons/SetEvIcon';
-import SettingsIcon from '../Icons/SettingsIcon';
-import TradeIcon from '../Icons/TradeIcon';
-import WishListIcon from '../Icons/WishListIcon';
+import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
+import SearchIcon from '@material-ui/icons/Search';
+import CasinoIcon from '@material-ui/icons/Casino';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
+import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
+import GavelIcon from '@material-ui/icons/Gavel';
+import HistoryIcon from '@material-ui/icons/History';
+import SettingsIcon from '@material-ui/icons/Settings';
+import HelpIcon from '@material-ui/icons/Help';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import BrokenImageIcon from '@material-ui/icons/BrokenImage';
 
 ////////////////////////////////////////////////
 // Props
@@ -33,30 +32,28 @@ const DrawerIcon = (props : Props) => {
 
   return (
     ("Quick Search".localeCompare(props.name) === 0)
-    ? <SearchIcon/>
+    ? <YoutubeSearchedForIcon/>
     : ("Advanced Search".localeCompare(props.name) === 0)
-    ? <AdvancedSearchIcon/>
+    ? <SearchIcon/>
     : ("Dice".localeCompare(props.name) === 0)
-    ? <DiceIcon/>
+    ? <CasinoIcon/>
     : ("Life Tracker".localeCompare(props.name) === 0)
-    ? <LifeIcon/>
+    ? <LocalHospitalIcon/>
     : ("Wishlist".localeCompare(props.name) === 0)
-    ? <WishListIcon/>
+    ? <StarBorderIcon/>
     : ("Trade Cards".localeCompare(props.name) === 0)
-    ? <TradeIcon/>
+    ? <SwapHorizIcon/>
     : ("Rules".localeCompare(props.name) === 0)
-    ? <RulesIcon/>
+    ? <GavelIcon/>
     : ("Set EVs".localeCompare(props.name) === 0)
-    ? <SetEvIcon/>
-    : ("Search History".localeCompare(props.name) === 0)
-    ? <SearchHistoryIcon/>
+    ? <HistoryIcon/>
     : ("Settings".localeCompare(props.name) === 0)
     ? <SettingsIcon/>
     : ("Help".localeCompare(props.name) === 0)
     ? <HelpIcon/>
     : ("Back".localeCompare(props.name) === 0)
-    ? <ReturnIcon/>
-    : <View/>
+    ? <KeyboardBackspaceIcon/>
+    : <BrokenImageIcon/>
     );
 }
 

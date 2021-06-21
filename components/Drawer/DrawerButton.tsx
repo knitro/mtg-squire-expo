@@ -1,8 +1,12 @@
 import React from 'react';
-import { Card, Typography } from '@material-ui/core';
-import { TouchableOpacity, View } from 'react-native';
-import DrawerIcon from './DrawerIcon';
-import { currentTheme } from '../../theme/Colours';
+import { makeStyles } from '@material-ui/core/styles';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import DrawerIcon from './DrawerIcon'
+import SearchIcon from '../Icons/SearchIcon';
 
 ////////////////////////////////////////////////
 // Props
@@ -24,19 +28,20 @@ interface Props {
  */
 const DrawerButton = (props : Props) => {
 
+  const iconName : string = props.name;
+  const label : string = props.name;
+
   return (
-      <TouchableOpacity     
-        onPress={() => {
-          props.buttonNav();    
-          props.closeDrawer()
-        }} 
-        style={{backgroundColor: currentTheme.secondary.main}}
-      >
-        <View style={{flexDirection: 'row', justifyContent: "flex-start", alignItems: "center", padding: 5 }}>
-          <DrawerIcon name={props.name}/>
-          <Typography style={{paddingLeft: 10, fontSize: 20, color: currentTheme.secondary.contrast }}>{props.name}</Typography>
-        </View>
-      </TouchableOpacity>
+
+    <ListItem button onClick={() => {
+      props.buttonNav();    
+      props.closeDrawer()
+    }}>
+      <ListItemIcon>
+        <DrawerIcon name={iconName}/>
+      </ListItemIcon>
+      <ListItemText primary={label} />
+    </ListItem>
   );
 }
 
