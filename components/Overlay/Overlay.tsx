@@ -49,15 +49,15 @@ const Overlay: React.FC<Props> = (props : Props) => {
       </View>
 
       {/*Creates the Drawer*/}
-      <Drawer  
+      <SwipeableDrawer  
         anchor={"left"} 
         open={drawerOpen}
-        // onOpen={() => toggleDrawerOpen(true)}
+        onOpen={() => toggleDrawerOpen(true)}
         onClose={() => toggleDrawerOpen(false)} 
         style={{width:200}}
       >
         <DrawerContent closeDrawer={() => toggleDrawerOpen(false)}/>
-      </Drawer >
+      </SwipeableDrawer >
       
     </View>
   );
